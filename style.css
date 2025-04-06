@@ -1,0 +1,274 @@
+ /* ------------------------------
+       BASE STYLES
+    --------------------------------*/
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Verdana", sans-serif;
+    }
+
+body {
+      background: #303030 url('https://images.alphacoders.com/113/thumb-1920-1130469.png') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* For a pixel-art vibe, consider a specialized font or scaling approach. */
+    }
+
+.game-container {
+      position: relative;
+      width: 1024px; /* Adjust to your desired “game” width */
+      height: 576px; /* Adjust to your desired “game” height */
+      border: 2px solid #999;
+      background-color: rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .hud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Typically HUD elements don't block clicks on the game world */
+      /* If you need them to be interactive, remove pointer-events: none and set on specific elements. */
+    }
+
+    /* ------------------------------
+       TOP BAR (CLOCK, DAY/SEASON, ETC.)
+    --------------------------------*/
+    .top-bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 20px;
+      pointer-events: auto; /* So you can interact with these elements */
+    }
+
+    .clock {
+      width: 100px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .day-season {
+      width: 100px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #pinned-orders {
+      top: 10px;
+      left: 258px;
+      display: flex;
+      gap: 0px;
+    }
+
+    /* ------------------------------
+       INVENTORY BAR
+    --------------------------------*/
+    .inventory-bar {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .inventory-slot {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #888;
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    /* ------------------------------
+       LANTERN + OIL METER
+    --------------------------------*/
+    .lantern-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 50px;
+      text-align: center;
+      pointer-events: auto;
+    }
+
+    .lantern-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid #ccc;
+      margin-bottom: 5px;
+    }
+
+    .oil-meter {
+      width: 50px;
+      height: 10px;
+      background: #444;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .oil-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 70%; /* Example fill level: 70% */
+      background: #ffeb3b; /* Yellowish color for “oil” */
+    }
+
+    /* ------------------------------
+       HEALTH & ENERGY
+    --------------------------------*/
+    .status-bars {
+      position: absolute;
+      top: 85px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .bar {
+      width: 150px;
+      height: 20px;
+      background: #444;
+      border: 1px solid #ccc;
+      position: relative;
+    }
+
+    .health-fill {
+      background: linear-gradient(90deg, #66bb6a, #2e7d32);
+      width: 80%; /* Example health: 80% */
+      height: 100%;
+    }
+
+    .energy-fill {
+      background: linear-gradient(90deg, #64b5f6, #1e88e5);
+      width: 60%; /* Example energy: 60% */
+      height: 100%;
+    }
+
+    /* ------------------------------
+       PINNED ORDERS
+    --------------------------------*/
+    .pinned-orders {
+      position: absolute;
+      top: 10px;
+      left: 200px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ccc;
+      padding: 5px 10px;
+      pointer-events: auto;
+    }
+
+    /* ------------------------------
+       QUICK ACCESS MENU
+    --------------------------------*/
+    .quick-menu {
+      position: absolute;
+      top: 140px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .menu-button {
+      width: 150px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ccc;
+      text-align: center;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    /* ------------------------------
+       MAP & MAILBOX ICONS
+    --------------------------------*/
+    .map-mailbox-container {
+      position: absolute;
+      bottom: 80px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: auto;
+    }
+
+    .icon-button {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid #ccc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ------------------------------
+       MOOD METER & LANTERN UPGRADE
+    --------------------------------*/
+    .special-features {
+      position: absolute;
+      bottom: 80px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: auto;
+    }
+
+    .mood-meter,
+    .lantern-upgrade {
+      width: 100px;
+      height: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ------------------------------
+       SEASONAL UI EXAMPLE
+       We'll add or remove a class like .season-winter, .season-spring, etc.
+       to the .hud to show how you could alter the look or add edges/graphics.
+    --------------------------------*/
+    .season-winter {
+      border: 2px solid #80d0ff; /* Example: frosty border */
+    }
+    .season-spring {
+      border: 2px solid #00ff00; /* Example: bright green border */
+    }
