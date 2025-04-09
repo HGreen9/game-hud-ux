@@ -52,3 +52,28 @@ body {
         transform: translate(-50%, -50%) rotate(105deg);
     }
 }
+
+.toolbar {
+    display: flex;
+    justify-content: center; /* Center the circles horizontally */
+    align-items: center;
+    gap: 10px; /* Add spacing between the circles */
+    position: absolute;
+    bottom: 20px; /* Position the toolbar 20px from the bottom */
+    left: 50%; /* Center the toolbar horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    padding: 10px;
+}
+
+.inventory-slot {
+    width: 68px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ff0000; /* Red stroke */
+    background-color: transparent; /* No fill */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.inventory-slot:hover {
+    border-color: #ffcc00; /* Change stroke color on hover */
+}
