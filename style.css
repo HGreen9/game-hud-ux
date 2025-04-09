@@ -37,7 +37,7 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 30px solid rgb(224, 109, 21); /* Triangle color, now pointing up */
+    border-top: 30px solid rgb(255, 119, 15); /* Triangle color, now pointing up */
     animation: rotate 3s ease-in-out infinite; /* Slower oscillation */
 }
 
@@ -59,17 +59,17 @@ body {
     align-items: center;
     gap: 10px; /* Add spacing between the circles */
     position: absolute;
-    bottom: 20px; /* Position the toolbar 20px from the bottom */
-    left: 50%; /* Center the toolbar horizontally */
+    bottom: 18px; /* Position the toolbar 20px from the bottom */
+    left: 50.3%; /* Center the toolbar horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     padding: 10px;
 }
 
 .inventory-slot {
-    width: 68px;
-    height: 70px;
+    width: 70px;
+    height: 74px;
     border-radius: 50%;
-    border: 2px solid #ff0000; /* Red stroke */
+    border: 2px solid #366331; /* Red stroke */
     background-color: transparent; /* No fill */
     transition: border-color 0.3s ease; /* Smooth transition for hover effect */
 }
