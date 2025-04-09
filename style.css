@@ -22,8 +22,8 @@ body {
 
 .map {
     position: absolute;
-    top: 8vh; /* Adjust as needed */
-    Right: 30%; /* Center horizontally relative to the viewport */
+    top: 19vh; /* Adjust as needed */
+    Right: 25%; /* Center horizontally relative to the viewport */
     transform: translateX(-50%); /* Center the element horizontally */
     z-index: 10;
 }
@@ -37,7 +37,7 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 25px solid #e89134; /* Triangle color, now pointing up */
+    border-top: 30px solid rgb(224, 109, 21); /* Triangle color, now pointing up */
     animation: rotate 3s ease-in-out infinite; /* Slower oscillation */
 }
 
