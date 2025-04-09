@@ -7,3 +7,14 @@ body {
   height: 100vh;
   margin: 0; 
 }
+
+#inGameClock {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  position: absolute; 
+  top: 62px;
+  left: 435px;
+  transform: translateX(-20%); /* Center alignment correction */
+  z-index: 10; /* Ensure it appears above the background image */
+}
