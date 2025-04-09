@@ -37,7 +37,7 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 30px solid rgb(255, 119, 15); /* Triangle color, now pointing up */
+    border-top: 30px solid rgb(252, 255, 222); /* Triangle color, now pointing up */
     animation: rotate 3s ease-in-out infinite; /* Slower oscillation */
 }
 
